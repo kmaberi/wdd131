@@ -4,7 +4,8 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+    /* Updated to use Google Font */
     background-color: #f4f4f4;
     color: #333;
 }
@@ -19,7 +20,9 @@ header {
 
 /* Navigation menu styles */
 nav ul {
-    display: flex;
+    display: grid;
+    /* Replaced flex with grid */
+    grid-auto-flow: column;
     justify-content: center;
     list-style: none;
     padding: 0;
@@ -45,6 +48,10 @@ nav ul li a:hover {
 main {
     padding: 2rem;
     background-color: white;
+    max-width: 1200px;
+    /* Added max-width for responsiveness */
+    margin: 0 auto;
+    /* Center the content */
 }
 
 /* Footer styles */
@@ -59,7 +66,9 @@ footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: grid;
+    /* Replaced flex with grid */
+    grid-auto-flow: column;
     justify-content: center;
 }
 
