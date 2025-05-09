@@ -1,84 +1,113 @@
-/* General styles */
+/*
+  base.css - Styles for WDD 131 – Dynamic Web Fundamentals
+  Author: Kenneth Maberi
+  Google Fonts: Roboto (body), Montserrat (headings)
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+/* Color Scheme Variables */
+:root {
+  --color-bg: #f4f4f9;
+  --color-card-bg: #ffffff;
+  --color-primary: #2a9d8f;
+  --color-secondary: #264653;
+  --color-accent: #e76f51;
+  --color-text: #333333;
+  --color-light: #fafafa;
+}
+
+/* Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Header styles */
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Header */
 header {
-    background-color: #0077cc;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 1rem;
+}
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
-/* Navigation styles */
+/* Navigation Flex */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    /* Replaced flex with grid */
-    grid-auto-flow: column;
-    justify-content: center;
-    background-color: #005fa3;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+nav a:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    /* Added hover pseudo-class */
-}
-
-/* Main content styles */
+/* Main Content */
 main {
-    max-width: 1200px;
-    /* Added max-width */
-    margin: 0 auto;
-    /* Centered the content */
-    padding: 2rem;
-    background-color: white;
+  flex: 1;
+  max-width: 900px;
+  width: 90%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background-color: var(--color-card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.75rem;
+  color: var(--color-secondary);
+}
+.card p {
+  margin-top: 0.5rem;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
-    background-color: #0077cc;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    /* Replaced flex with grid */
-    grid-auto-flow: column;
-    justify-content: center;
-}
-
-footer ul li {
-    margin: 0 1rem;
-}
-
-footer ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-footer ul li a:hover {
-    text-decoration: underline;
+footer span, footer #lastModified {
+  font-weight: 500;
 }

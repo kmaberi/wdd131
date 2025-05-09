@@ -1,8 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" </head>
+  <!-- … other head elements … -->
+  <script src="scripts/getdates.js" defer></script>
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals - Kenneth Maberi</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals, Kenneth Maberi, HTML basics, web layout, JavaScript date handling." />
+  <meta name="author" content="Kenneth Maberi" />
+    <link rel="stylesheet" href="styles/base.css" />
+
+
+
+</head>
+<body>
+  <header>
+    <h1>WDD 131 – Dynamic Web Fundamentals</h1>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>About Me</h2>
+      <img src="images/kenneth.jpg" alt="Photo of Kenneth" width="300" />
+      <p>Hello! My name is Kenneth Maberi. I’m a software development student at BYU Pathway Worldwide from Uganda. I enjoy football, reading, and learning new technologies.</p>
+    </section>
+
+    <section class="card">
+      <h2>My Interests</h2>
+      <div class="interests-container">
+        <img src="images/football.jpeg" alt="Football image" width="300" />
+        <div class="kenneth-story">
+          <h3>Kenneth's Football Story</h3>
+          <p>
+            Ever since he was a child in Uganda, Kenneth dreamed of playing football on the big stage. Every evening, he would gather with friends on a dusty field, using makeshift goals and a worn-out ball. Through perseverance and teamwork, Kenneth learned valuable lessons that now inspire his journey in software development—always striving, always learning, and never giving up.
+          </p>
+        </div>
+      </div>
+      <p>I’m passionate about football and enjoy watching and playing the game. I also love reading books about personal growth and programming.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Kenneth Maberi, Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
 </html>

@@ -1,0 +1,101 @@
+/* General styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* Replaced flex with grid */
+    grid-auto-flow: column;
+    justify-content: center;
+    background-color: #005fa3;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    /* Added hover pseudo-class */
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    /* Added max-width */
+    margin: 0 auto;
+    /* Centered the content */
+    padding: 2rem;
+    background-color: white;
+}
+
+/* Footer styles */
+footer {
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* Replaced flex with grid */
+    grid-auto-flow: column;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 1rem;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Interests container styles */
+.interests-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Kenneth story styles */
+.kenneth-story {
+  background-color: #f4f4f4;
+  border-left: 4px solid #0077b6;
+  padding: 1rem;
+  max-width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
