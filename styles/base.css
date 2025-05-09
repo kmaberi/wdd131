@@ -99,3 +99,62 @@ footer ul li a:hover {
   max-width: 350px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+/* Interests flex styles */
+.interests-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.interests-flex img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.story {
+  flex: 1;
+}
+
+/* About flex styles */
+.about-flex .about-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-flex img {
+  max-width: 160px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Main navigation styles */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.logo {
+  max-height: 48px;
+  width: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  background-color: #005fa3;
+}

@@ -1,51 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <!-- … other head elements … -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Dynamic Web Fundamentals – Kenneth Maberi</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals by Kenneth Maberi. Learn HTML5 structure, CSS Flexbox/Grid layouts, responsive design, and JavaScript date handling.">
+  <meta name="author" content="Kenneth Maberi">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/base.css">
+
+  <!-- JavaScript: defer execution until after parsing -->
   <script src="scripts/getdates.js" defer></script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD 131 – Dynamic Web Fundamentals - Kenneth Maberi</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals, Kenneth Maberi, HTML basics, web layout, JavaScript date handling." />
-  <meta name="author" content="Kenneth Maberi" />
-    <link rel="stylesheet" href="styles/base.css" />
-
-
-
 </head>
 <body>
   <header>
-    <h1>WDD 131 – Dynamic Web Fundamentals</h1>
-    <nav>
+    <nav class="main-nav">
+      <a href="https://www.byui.edu/" class="logo-link">
+        <img src="images/byui-logo.webp" alt="BYU-I Logo" class="logo">
+      </a>
       <ul>
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a></li>
-        <li><a href="#">Final Project</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="week1.html">W1</a></li>
+        <li><a href="week2.html">W2</a></li>
+        <li><a href="week3.html">W3</a></li>
+        <li><a href="week4.html">W4</a></li>
+        <li><a href="week5.html">W5</a></li>
+        <li><a href="week6.html">W6</a></li>
+        <li><a href="week7.html">W7</a></li>
+        <li><a href="#">Page Audit: W01 Course Home</a></li>
+        <li><a href="https://github.com/kmaberi">GitHub: kmaberi</a></li>
       </ul>
     </nav>
+    <h1>WDD 131 – Dynamic Web Fundamentals – Kenneth Maberi</h1>
   </header>
 
   <main>
-    <section class="card">
+    <section class="card about-flex">
       <h2>About Me</h2>
-      <img src="images/kenneth.jpg" alt="Photo of Kenneth" width="300" />
-      <p>Hello! My name is Kenneth Maberi. I’m a software development student at BYU Pathway Worldwide from Uganda. I enjoy football, reading, and learning new technologies.</p>
+      <div class="about-content">
+        <img src="images/kenneth.jpg" alt="Photo of Kenneth Maberi">
+        <p>Hello! I’m Kenneth Maberi, a software development student at BYU Pathway Worldwide from Uganda. I enjoy football, reading, and learning new technologies.</p>
+      </div>
     </section>
 
-    <section class="card">
+    <section class="card interests-card">
       <h2>My Interests</h2>
-      <div class="interests-container">
-        <img src="images/football.jpeg" alt="Football image" width="300" />
-        <div class="kenneth-story">
-          <h3>Kenneth's Football Story</h3>
+      <div class="interests-flex">
+        <img src="images/football.jpeg" alt="Football Game">
+        <div class="story">
+          <p>I’m passionate about football—both watching and playing—and I love reading about personal growth and programming.</p>
           <p>
-            Ever since he was a child in Uganda, Kenneth dreamed of playing football on the big stage. Every evening, he would gather with friends on a dusty field, using makeshift goals and a worn-out ball. Through perseverance and teamwork, Kenneth learned valuable lessons that now inspire his journey in software development—always striving, always learning, and never giving up.
+            <strong>Story:</strong> As a child in Uganda, Kenneth would gather with friends on dusty fields, using makeshift balls and goalposts. His love for football taught him teamwork, perseverance, and the joy of community. Today, he still plays whenever he can, finding inspiration and life lessons on the pitch.
           </p>
         </div>
       </div>
-      <p>I’m passionate about football and enjoy watching and playing the game. I also love reading books about personal growth and programming.</p>
     </section>
   </main>
 
@@ -53,10 +66,5 @@
     <p>&copy; <span id="currentyear"></span> Kenneth Maberi, Uganda</p>
     <p id="lastModified"></p>
   </footer>
-
-  <script>
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-  </script>
 </body>
 </html>
