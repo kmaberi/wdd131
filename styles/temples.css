@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif; /* Use Google Fonts */
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 1rem;
+}
+
+figure {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
