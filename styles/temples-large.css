@@ -1,0 +1,24 @@
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for larger screens */
+    gap: 2rem;
+  }
+
+  nav ul {
+    justify-content: space-around;
+  }
+
+  figure {
+    padding: 1.5rem;
+  }
+}
