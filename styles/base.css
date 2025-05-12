@@ -44,12 +44,20 @@ nav ul li a:hover {
 
 /* Main content styles */
 main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     max-width: 1200px;
-    /* Added max-width */
     margin: 0 auto;
-    /* Centered the content */
     padding: 2rem;
-    background-color: white;
+}
+
+/* Card styles */
+.card {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer styles */
@@ -152,11 +160,19 @@ footer ul li a:hover {
 }
 
 .main-nav ul {
+    display: flex;
+    justify-content: space-around;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    background-color: #005fa3;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+    text-decoration: underline;
 }
