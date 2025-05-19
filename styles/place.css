@@ -8,10 +8,9 @@
 body {
     font-family: var(--font-family);
     background: url('images/jesus-background.jpg') no-repeat center center fixed;
-    /* Add the background image */
     background-size: cover;
-    /* Ensure the image covers the entire page */
-    color: var(--text-color);
+    color: #ffffff;
+    /* Ensure text is readable over the background */
     margin: 0;
     padding: 0;
 }
@@ -70,6 +69,23 @@ nav ul li a {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2,
+.content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 footer {
