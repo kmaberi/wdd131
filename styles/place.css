@@ -22,10 +22,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent black overlay */
-    z-index: -1;
-    /* Ensure it stays behind the content */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Ensure it stays behind the content */
 }
 
 header {
@@ -63,29 +61,34 @@ nav ul li a {
 }
 
 .content {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+    color: var(--text-color); /* Ensure text color is readable */
+    padding: 1.5rem; /* Add padding for spacing */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 2rem auto; /* Center the content section */
 }
 
 .content h2,
 .content h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.content ul {
-    list-style: disc;
-    margin-left: 2rem;
+    color: var(--primary-color); /* Use the primary color for headings */
     margin-bottom: 1rem;
 }
 
 .content p {
-    line-height: 1.6;
+    line-height: 1.6; /* Improve readability with proper line spacing */
     margin-bottom: 1rem;
+}
+
+.content ul {
+    list-style: disc; /* Use a disc for list items */
+    margin-left: 2rem; /* Add left margin for indentation */
+    margin-bottom: 1rem;
+}
+
+.content ul li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
 }
 
 footer {
@@ -99,15 +102,16 @@ footer {
     text-align: center;
     margin: 2rem auto;
     padding: 1rem;
-    background-color: #eaf4fc;
+    background-color: #69add2;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .weather img {
-    width: 50px;
+    width: 50px; /* Ensure the icon has a visible size */
     height: auto;
     margin-bottom: 0.5rem;
+    display: block; /* Ensure the image is displayed */
 }
 
 .weather h2 {
