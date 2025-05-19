@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="Explore the Temple Album featuring beautiful images and captions of various temples.">
+    <meta name="author" content="Kenneth Maberi">
+
+    <!-- Link to CSS files for mobile-first development -->
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+
+    <!-- JavaScript: defer execution until after parsing -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 480px)">
+                <img src="images/hero-small.webp" alt="Beautiful Temple Landscape">
+            </picture>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content">
+            <h2>About This Place</h2>
+            <p>Discover the history and beauty of this sacred temple. Learn about its architecture, significance, and the stories behind its creation.</p>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Partly Cloudy">
+            <p>Partly Cloudy, 25°C</p>
+            <p>Wind Speed: 10 km/h</p>
+            <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Kenneth Maberi, Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

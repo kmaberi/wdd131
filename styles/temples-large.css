@@ -21,4 +21,16 @@
   figure {
     padding: 1.5rem;
   }
+
+  .weather h2 {
+    font-size: 2rem;
+  }
+
+  .weather p {
+    font-size: 1.2rem;
+  }
+
+  .weather img {
+    display: none; /* Hide SVG icon in larger screens */
+  }
 }
