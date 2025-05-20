@@ -10,12 +10,10 @@
     <meta name="author" content="Kenneth Maberi">
 
     <!-- Google Fonts -->
-    
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Link to CSS files -->
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
 
@@ -41,27 +39,22 @@
         <!-- Hero Section -->
         <section class="hero">
             <h2>Beautiful Temple</h2>
-            <p>Explore the beauty of this temple and its serene surroundings.</p>
             <picture>
-                <source srcset="images/placeholder-Temple3.webp" media="(min-width: 768px)">
-                <source srcset="images/placeholder-Temple3.webp" media="(min-width: 480px)">
-                <img src="images/placeholder-Temple3.webp" alt="Beautiful Temple Landscape">
+                <source srcset="images/temple.webp" media="(min-width: 1200px)">
+                <source srcset="images/temple.webp" media="(min-width: 768px)">
+                <img src="images/temple-large.webp" alt="Beautiful Temple Landscape">
             </picture>
         </section>
 
         <!-- Content Section -->
         <section class="content">
             <h2>About This Place</h2>
-            <p>
-                This temple is a symbol of peace and spirituality, located in the heart of a serene landscape. Its
+            <p>This temple is a symbol of peace and spirituality, located in the heart of a serene landscape. Its
                 architecture reflects the rich cultural heritage of the region, blending traditional and modern design
-                elements.
-            </p>
-            <p>
-                Visitors from around the world come to admire its intricate carvings, beautiful gardens, and the
-                tranquil atmosphere that surrounds it. The temple serves as a place of worship, meditation, and
-                community gatherings.
-            </p>
+                elements.</p>
+            <p>Visitors from around the world come to admire its intricate carvings, beautiful gardens, and the tranquil
+                atmosphere that surrounds it. The temple serves as a place of worship, meditation, and community
+                gatherings.</p>
             <h3>Key Features</h3>
             <ul>
                 <li>Stunning architecture with intricate carvings and sculptures.</li>
@@ -70,26 +63,48 @@
                 <li>Rich history and cultural significance.</li>
             </ul>
             <h3>Visitor Information</h3>
-            <p>
-                The temple is open to visitors daily from 8:00 AM to 6:00 PM. Guided tours are available to provide
+            <p>The temple is open to visitors daily from 8:00 AM to 6:00 PM. Guided tours are available to provide
                 insights into the history and significance of the temple. Visitors are encouraged to dress modestly and
-                respect the sacred nature of the site.
-            </p>
+                respect the sacred nature of the site.</p>
         </section>
 
         <!-- Weather Section -->
         <section class="weather">
             <h2>Weather</h2>
-            <img src="images/icon-59-128.svg" alt="Partly Cloudy">
-            <p>Partly Cloudy, 25°C</p>
-            <p>Wind Speed: 10 km/h</p>
+            <!-- Inline SVG for mobile and desktop -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Partly cloudy"
+                class="mobile-icon">
+                <!-- Sun -->
+                <circle cx="80" cy="40" r="24" fill="#FFC107" />
+                <!-- Sun rays -->
+                <g stroke="#FFC107" stroke-width="4" stroke-linecap="round">
+                    <line x1="80" y1="4" x2="80" y2="16" />
+                    <line x1="112" y1="40" x2="100" y2="40" />
+                    <line x1="80" y1="76" x2="80" y2="64" />
+                    <line x1="48" y1="40" x2="60" y2="40" />
+                    <line x1="101" y1="15" x2="92" y2="24" />
+                    <line x1="59" y1="15" x2="68" y2="24" />
+                </g>
+                <!-- Cloud -->
+                <g fill="#B3E5FC" stroke="#64B5F6" stroke-width="4">
+                    <circle cx="48" cy="72" r="24" />
+                    <circle cx="72" cy="80" r="24" />
+                    <circle cx="32" cy="88" r="24" />
+                    <rect x="24" y="72" width="72" height="32" rx="16" ry="16" />
+                </g>
+            </svg>
+
+            <p>Partly Cloudy, <span id="temp">25</span>°C</p>
+            <p>Wind Speed: <span id="speed">10</span> km/h</p>
             <p>Wind Chill: <span id="windChill">Calculating...</span></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Kenneth Maberi, Uganda</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="currentYear"></span> Kenneth Maberi, Uganda</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>Current Date and Time: <span id="currentDateTime"></span></p>
+        <p>Time Zone: <span id="timeZone"></span></p>
     </footer>
 </body>
 

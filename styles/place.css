@@ -6,15 +6,12 @@
 }
 
 body {
-     
-  font-family: 'Roboto', sans-serif;
-
-
-    font-family: var(--font-family);
-    background: url('images/jesus-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #ffffff;
-    /* Ensure text is readable over the background */
+    font-family: 'Roboto', sans-serif;
+    /* Ensure the font is applied */
+    background-color: #f0f8ff;
+    /* Light blue */
+    color: #333;
+    /* Dark gray for contrast */
     margin: 0;
     padding: 0;
 }
@@ -26,15 +23,15 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: -1; /* Ensure it stays behind the content */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black overlay */
+    z-index: -1;
 }
 
 header {
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 1rem;
+    /* Ensure text is readable */
 }
 
 header h1 {
@@ -52,70 +49,83 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
 .hero picture img {
-    width: 50%;
-    height: 70%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     object-fit: cover;
-    align-items: center;
     display: block;
+    margin: 0 auto;
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+    background-color: rgb(255, 255, 255); /* Semi-transparent white background */
     color: var(--text-color); /* Ensure text color is readable */
-    padding: 1.5rem; /* Add padding for spacing */
-    border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
-    max-width: 800px; /* Limit the width for better readability */
-    margin: 2rem auto; /* Center the content section */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(25, 50, 70, 0.2);
+    width: 100%; /* Make the content fill the width */
+    margin: 2rem 0; /* Add vertical spacing */
 }
 
 .content h2,
 .content h3 {
-    color: var(--primary-color); /* Use the primary color for headings */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.content h2 {
+    color: blue; /* Change the heading color to blue */
     margin-bottom: 1rem;
 }
 
 .content p {
-    line-height: 1.6; /* Improve readability with proper line spacing */
+    line-height: 1.6;
     margin-bottom: 1rem;
 }
 
 .content ul {
-    list-style: disc; /* Use a disc for list items */
-    margin-left: 2rem; /* Add left margin for indentation */
+    list-style: disc;
+    margin-left: 2rem;
     margin-bottom: 1rem;
 }
 
 .content ul li {
-    margin-bottom: 0.5rem; /* Add spacing between list items */
-}
-
-footer {
-    background-color: #0077cc;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .weather {
     text-align: center;
     margin: 2rem auto;
     padding: 1rem;
-    background-color: #69add2; /* Light blue background */
+    background-color: #69add2;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
 }
 
 .weather img {
-    width: 50px; /* Ensure the icon has a visible size */
+    width: 3rem;
     height: auto;
     margin-bottom: 0.5rem;
-    display: block; /* Ensure the image is displayed */
+    display: block;
+}
+
+.weather svg {
+    fill: #ffffff;
+    /* Set the color of the SVG */
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.weather svg path,
+.weather svg circle {
+    fill: #ffffff;
+    /* Set the color of the SVG elements */
 }
 
 .weather h2 {
@@ -124,7 +134,7 @@ footer {
 }
 
 .weather h2::after {
-    content: " ⛅"; /* Add a weather emoticon */
+    content: " ⛅";
     font-size: 1.5rem;
     color: var(--primary-color);
     margin-left: 0.5rem;
@@ -133,4 +143,26 @@ footer {
 .weather p {
     font-size: 1rem;
     color: #333;
+}
+
+footer {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+svg[role="img"] {
+    height: 4rem;
+    width: 4rem;
+    margin: 0 auto;
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.highlight {
+    color: blue; /* Change the color to blue */
 }
