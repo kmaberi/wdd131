@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy Loading Images Demo</title>
+    <link rel="stylesheet" href="styles/lazyload.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Lazy‐Loading Portrait Images</h1>
+
+        <!-- Six portrait images, lazy loaded -->
+        <img src="images/saw.jpg" data-src="images/Photo1.JPG" alt="Portrait Image 1" width="400" height="700"
+            loading="lazy" />
+        <img src="images/woman.jpg" data-src="images/woman.jpg" alt="Portrait Image 2" width="400" height="800"
+            loading="lazy" />
+        <img src="images/real.jpg" data-src="images/real.jpg" alt="Portrait Image 2"
+            width="400" height="800" loading="lazy" />
+        <img src="images/love.jpg" data-src="images/love.jpg" alt="Portrait Image 3" width="400" height="750"
+            loading="lazy" />
+        <img src="images/class.jpg" data-src="images/class.jpg" alt="Portrait Image 4" width="400" height="650"
+            loading="lazy" />
+        <img src="images/iconic.jpg" data-src="images/iconic.jpg" alt="Portrait Image 5" width="400" height="640"
+            loading="lazy" />
+        <img src="images/beauty.jpg" data-src="images/beauty.jpg" alt="Portrait Image 6" width="400" height="600"
+            loading="lazy" />
+
+    </main>
+
+    <footer>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/lazyload.js"></script>
+</body>
+
+</html>
