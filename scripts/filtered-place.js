@@ -133,3 +133,5 @@ document.querySelector("nav").addEventListener("click", (event) => {
         renderTemples(temples); // Show all temples
     }
 });
+
+console.log(temples.filter((temple) => new Date(temple.dedicated).getFullYear() < 1900)); // For "Old"
