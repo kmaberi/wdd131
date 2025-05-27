@@ -63,3 +63,46 @@ detectTimeZone();
 
 // Optionally, update the time every second
 setInterval(updateDateTime, 1000);
+
+// Function to render temples
+function renderTemples(temples) {
+  const container = document.getElementById("temples-container");
+
+  temples.forEach((temple) => {
+    // Create a card for each temple
+    const card = document.createElement("div");
+    card.classList.add("temple-card");
+
+    // Add temple image
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = `${temple.templeName} Image`;
+    card.appendChild(img);
+
+    // Add temple name
+    const name = document.createElement("h3");
+    name.textContent = temple.templeName;
+    card.appendChild(name);
+
+    // Add temple location
+    const location = document.createElement("p");
+    location.textContent = `Location: ${temple.location}`;
+    card.appendChild(location);
+
+    // Add temple dedication date
+    const dedicated = document.createElement("p");
+    dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+    card.appendChild(dedicated);
+
+    // Add temple area
+    const area = document.createElement("p");
+    area.textContent = `Area: ${temple.area} sq ft`;
+    card.appendChild(area);
+
+    // Append the card to the container
+    container.appendChild(card);
+  });
+}
+
+// Call the function to render temples
+renderTemples(temples);
