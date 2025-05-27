@@ -84,7 +84,7 @@ function renderTemples(temples) {
         const img = document.createElement("img");
         img.src = temple.imageUrl;
         img.alt = `${temple.templeName} Image`;
-        img.loading = "lazy"; // Native lazy loading
+        img.loading = "lazy";
         card.appendChild(img);
 
         const name = document.createElement("h3");
@@ -135,3 +135,6 @@ document.querySelector("nav").addEventListener("click", (event) => {
 });
 
 console.log(temples.filter((temple) => new Date(temple.dedicated).getFullYear() < 1900)); // For "Old"
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
