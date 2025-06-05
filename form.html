@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
@@ -16,7 +18,7 @@
     <main>
         <form method="get" action="review.html" id="reviewForm" autocomplete="on">
             <!-- Product Name -->
-            <label for="productName">Product Name<span aria-hidden="true" style="color:red;">*</span></label>
+            <label for="productName">Product Name<span aria-hidden="true" class="required-star">*</span></label>
             <select id="productName" name="productName" required>
                 <option value="" disabled selected>Select a Product ...</option>
                 <!-- Options will be added dynamically by JS -->
@@ -24,7 +26,7 @@
 
             <!-- Overall Rating -->
             <fieldset>
-                <legend>Overall Rating<span aria-hidden="true" style="color:red;">*</span></legend>
+                <legend>Overall Rating<span aria-hidden="true" class="required-star">*</span></legend>
                 <div class="stars">
                     <input type="radio" id="star5" name="rating" value="5" required>
                     <label for="star5" title="5 stars">&#9733;</label>
@@ -40,7 +42,7 @@
             </fieldset>
 
             <!-- Date of Installation -->
-            <label for="installDate">Date of Installation<span aria-hidden="true" style="color:red;">*</span></label>
+            <label for="installDate">Date of Installation<span aria-hidden="true" class="required-star">*</span></label>
             <input type="date" id="installDate" name="installDate" required>
 
             <!-- Useful Features -->
@@ -67,7 +69,7 @@
             <input type="text" id="userName" name="userName" placeholder="(Optional)">
 
             <!-- Submit Button -->
-            <input type="submit" value="Submit Review">
+            <input type="submit" value="Submit">
         </form>
 
         <p>You have submitted <span id="reviewCount"></span> review(s).</p>

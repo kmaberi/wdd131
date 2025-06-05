@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
 
 :root {
-    --primary-color: #006400;   /* Deep green */
-    --accent-color: #ffd700;    /* Gold */
+    --primary-color: #006400;
+    /* Deep green */
+    --accent-color: #ffd700;
+    /* Gold */
     --background-color: #f4f4f4;
     --input-bg: #fff;
     --input-border: #bbb;
@@ -11,14 +13,15 @@
 }
 
 body {
-    font-family: var(--body-font);
+    font-family: 'Roboto', Arial, sans-serif;
     background: var(--background-color);
     margin: 0;
     padding: 0;
     color: #222;
 }
 
-header, footer {
+header,
+footer {
     background: var(--primary-color);
     color: #fff;
     text-align: center;
@@ -31,7 +34,7 @@ main {
     background: #fff;
     padding: 2rem 2rem 1.5rem 2rem;
     border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 form {
@@ -40,14 +43,18 @@ form {
     gap: 1.2rem;
 }
 
-label, legend {
-    font-family: var(--heading-font);
+label,
+legend {
+    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
     margin-bottom: 0.3rem;
     color: var(--primary-color);
 }
 
-input[type="text"], input[type="date"], select, textarea {
+input[type="text"],
+input[type="date"],
+select,
+textarea {
     width: 100%;
     padding: 0.6rem;
     border-radius: 5px;
@@ -105,9 +112,9 @@ fieldset {
     transition: color 0.2s;
 }
 
-.stars input[type="radio"]:checked ~ label,
+.stars input[type="radio"]:checked~label,
 .stars label:hover,
-.stars label:hover ~ label {
+.stars label:hover~label {
     color: var(--accent-color);
 }
 
@@ -121,10 +128,15 @@ footer p {
     font-size: 0.95em;
 }
 
+.required-star {
+    color: red;
+}
+
 @media (max-width: 600px) {
     main {
         padding: 1rem 0.5rem;
     }
+
     form {
         gap: 1rem;
     }
