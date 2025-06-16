@@ -1,3 +1,37 @@
+import ugandaFootballHistory from './ugandaFootballHistory.js';
+
+function renderHistorySlide() {
+    const historyContainer = document.getElementById("historyContent");
+    historyContainer.innerHTML = ''; // Clear container
+
+    // Create a single element for the sliding event.
+    const slideEl = document.createElement('div');
+    slideEl.classList.add("history-event");
+    historyContainer.appendChild(slideEl);
+
+    // Get a subset (e.g., five most recent events)
+    const recentEvents = ugandaFootballHistory.slice(-5);
+    let index = 0;
+
+    // Function to update the slide
+    function showNextEvent() {
+        // First, remove the "show" class to trigger fade-out/slide-out
+        slideEl.classList.remove('show');
+
+        // After transition duration (500ms), update the content and slide back in
+        setTimeout(() => {
+            const event = recentEvents[index];
+            slideEl.innerHTML = `<p><strong>${new Date(event.date).toLocaleDateString()}</strong> (${event.place}): ${event.description}</p>`;
+            slideEl.classList.add('show');
+            index = (index + 1) % recentEvents.length;
+        }, 500);
+    }
+
+    // Immediately show the first event, then change every 10 seconds
+    showNextEvent();
+    setInterval(showNextEvent, 10000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // --- Visit Counter ---
     let visits = localStorage.getItem("visitCount") ? Number(localStorage.getItem("visitCount")) : 0;
@@ -55,6 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         renderNews('newsContent');
     }
+
+    renderHistorySlide();
 });
 
 // --- Dynamic Featured Players ---

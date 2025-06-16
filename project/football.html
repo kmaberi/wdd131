@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/football.css">
-    <script src="scripts/football.js" defer></script>
+    <script type="module" src="scripts/football.js"></script>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="manifest" href="site.webmanifest">
 </head>
@@ -21,6 +21,13 @@
     <header>
         <img src="images/logo.png" alt="Ugandan Football Logo" class="logo">
         <h1>Ugandan Football</h1>
+        <!-- New History Sidebar -->
+        <aside class="history-sidebar">
+            <h2>History of Ugandan Football</h2>
+            <div id="historyContent">
+                <!-- The sliding event will be injected here -->
+            </div>
+        </aside>
         <nav>
             <ul>
                 <li><a href="football.html">Home</a></li>
