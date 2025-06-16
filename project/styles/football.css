@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #006400;
+    /* Deep green */
+    --accent-color: #ffd700;
+    /* Gold */
+    --background-color: #f4f4f4;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header .logo {
+    width: 60px;
+    vertical-align: middle;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--heading-font);
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.2rem;
+}
+
+#newsContent article,
+.player-card {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-card {
+    display: block;
+    background-image: url('https://example.com/player-bg.jpg');
+    width: calc(50% - 1rem);
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.player-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 0;
+    /* Remove rounded corners */
+}
+
+.image-caption {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* space between the image and the caption */
+    margin-bottom: 1rem;
+}
+
+.image-caption img {
+    max-width: 150px;
+    /* adjust as needed */
+    height: auto;
+    border-radius: 0;
+    /* ensures a square or rectangular appearance */
+}
+
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Styles for UPL Teams Section */
+#uplTeams {
+    margin: 2rem 0;
+}
+
+#teamsContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.team-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}

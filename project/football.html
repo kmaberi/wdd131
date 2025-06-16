@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Ugandan Football – featuring the latest news, player profiles, and match updates.">
+    <meta name="author" content="Kenneth Maberi">
+    <title>Ugandan Football - Home</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/football.css">
+    <script src="scripts/football.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Ugandan Football Logo" class="logo">
+        <h1>Ugandan Football</h1>
+        <nav>
+            <ul>
+                <li><a href="football.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Dynamic Latest News Section -->
+        <section id="news">
+            <h2>Latest News</h2>
+            <div id="newsContent">
+                <!-- News content will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Dynamic Featured Players Section -->
+        <section id="players">
+            <h2>Featured Players</h2>
+            <div id="playersContent">
+                <!-- Player cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- UPL Teams Section -->
+        <section id="uplTeams">
+            <h2>Upl Teams</h2>
+            <div id="teamsContent">
+                <!-- UPL teams will be dynamically added here -->
+            </div>
+        </section>
+
+        <!-- Visit Counter using localStorage -->
+        <section id="dynamicCounter">
+            <p>You have visited this site <span id="visitCount"></span> time(s).</p>
+
+        </section>
+
+        <!-- Image and Caption Section -->
+        <section id="imageCaption">
+            <div class="image-caption">
+                <img src="images/red_cross.png" alt="Red Cross" loading="lazy">
+                <p>Red Cross</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Kenneth Maberi | WDD 131 | Brigham Young University-Idaho</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+    <script>
+        // Set current year in the footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
